@@ -48,7 +48,10 @@ class CloudFoundryApp(object):
         enable_ssh=None,
         health_check_type=None,
         diego=None,
-
+        route_mappings_url=None,
+	docker_credentials_json=None,
+	staging_failed_description=None,
+	**kwa
     ):
         self.buildpack=buildpack
         self.command=command
