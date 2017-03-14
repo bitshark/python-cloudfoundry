@@ -21,13 +21,15 @@ class CloudFoundryDomain(object):
         name=None,
         metadata=None,
         owning_organization_guid=None,
-        owning_organization_url=None
+        owning_organization_url=None,
+        shared_organizations_url=None
     ):
         self._name=name
         self.owning_organization_guid=owning_organization_guid
         self.owning_organization_url=owning_organization_url
         self.guid = metadata['guid']
         self.url = metadata['url']
+        self.shared_organizations_url=shared_organizations_url
 
 
 

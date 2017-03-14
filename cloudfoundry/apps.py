@@ -44,7 +44,10 @@ class CloudFoundryApp(object):
         staging_task_id='',
         state='STOPPED',
         version='',
-        metadata=None
+        metadata=None,
+        enable_ssh=None,
+        health_check_type=None,
+        diego=None,
 
     ):
         self.buildpack=buildpack
@@ -76,7 +79,9 @@ class CloudFoundryApp(object):
         self.version=version
         self.guid = metadata['guid']
         self.url = metadata['url']
-
+        self.enable_ssh = None
+        self.health_check_type = None
+        self.diego = None
 
 
 

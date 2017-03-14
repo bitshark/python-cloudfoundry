@@ -34,7 +34,8 @@ class CloudFoundryOrg(object):
         auditors_url=None,
         app_events_url=None,
         space_quota_definitions_url=None,
-        metadata=None
+        metadata=None,
+        username=None
     ):
         self._name = name
         self.billing_enabled=billing_enabled
@@ -52,6 +53,7 @@ class CloudFoundryOrg(object):
         self.space_quota_definitions_url=space_quota_definitions_url
         self.guid = metadata['guid']
         self.url = metadata['url']
+        self.username = username
 
 
 

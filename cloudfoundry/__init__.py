@@ -15,7 +15,7 @@ from memoize import Memoizer
 
 cache_store = {}
 memo = Memoizer(cache_store)
-max_cache_time = 10
+max_cache_time = 3600
 
 
 class CloudFoundryException(Exception):
@@ -164,7 +164,7 @@ class CloudFoundryInterface(object):
 
     @memo(max_age=max_cache_time)
     def _update_orgs(self):
-        logging.info("Updating all orgs as user {}".format(self.username))
+        logging.info("Updating all orgs as user {}".format(self._username))
         raw = self._get_or_exception("v2/organizations")['resources']
         orgs = {}
         for org in raw:

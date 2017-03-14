@@ -34,7 +34,8 @@ class CloudFoundrySpace(object):
         app_events_url=None,
         events_url=None,
         security_groups_url=None,
-        metadata=None
+        metadata=None,
+        allow_ssh=None
     ):
         self._name = name
         self.organization_guid=organization_guid
@@ -52,7 +53,7 @@ class CloudFoundrySpace(object):
         self.security_groups_url=security_groups_url
         self.guid = metadata['guid']
         self.url = metadata['url']
-
+        self.allow_ssh = allow_ssh
 
 
     @property

@@ -26,7 +26,8 @@ class CloudFoundryRoute(object):
         domain_url=None,
         space_url=None,
         apps_url=None,
-        metadata=None
+        metadata=None,
+        path=None,
     ):
         self.host=host
         self.domain_guid=domain_guid
@@ -36,6 +37,7 @@ class CloudFoundryRoute(object):
         self.apps_url=apps_url
         self.guid = metadata['guid']
         self.url = metadata['url']
+        self.path = path
 
 
 
