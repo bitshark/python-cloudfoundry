@@ -1,3 +1,7 @@
+appdirs==1.4.3
+docopt==0.6.2
+packaging==16.8
 PyMemoize==1.0.1
-requests==2.5.1
-wsgiref==0.1.2
+pyparsing==2.2.0
+requests==2.13.0
+six==1.10.0
